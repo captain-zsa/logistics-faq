@@ -1,0 +1,24 @@
+.site {
+    display: flex;
+    justify-content: center;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 10%;
+        background-color: $u-white;
+    }
+
+    &__nav {
+        background-color: $u-white;
+    }
+
+    &__content {
+        background-color: $silver-normal;
+        flex-grow: 1;
+        width: 70%;
+        height: 100vh;
+        overflow-x: auto;
+        padding-left: 70px;
+    }
+}

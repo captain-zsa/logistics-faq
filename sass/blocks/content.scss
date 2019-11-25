@@ -1,0 +1,31 @@
+.content {
+    width: 840px;
+    padding-top: 50px;
+
+    &__box {
+        background-color: $u-white;
+    }
+
+    &__title {
+        margin-left: 42px;
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 50px;
+
+        b {
+            font-weight: 700;
+        }
+
+        &--icon {
+            @include flex(nowrap, flex-start, center);
+
+            img {
+                margin-right: 24px;
+                width: 47px;
+                height: auto;
+            }
+        }
+    }
+}
