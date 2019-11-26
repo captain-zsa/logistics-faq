@@ -2,8 +2,15 @@
     width: 840px;
     padding-top: 50px;
 
+    @media (max-width: 1240px) {
+        margin: 0 auto;
+        width: 768px;
+        padding-top: 30px;
+    }
+
     &__box {
         background-color: $u-white;
+        padding-bottom: 30px;
     }
 
     &__title {
@@ -13,6 +20,10 @@
         font-weight: 300;
         margin-top: 0;
         margin-bottom: 50px;
+
+        @media (max-width: 1240px) {
+            margin-bottom: 30px;
+        }
 
         b {
             font-weight: 700;
