@@ -8,6 +8,10 @@
         padding-top: 30px;
     }
 
+    @include mobile {
+        width: 100%;
+    }
+
     &__box {
         background-color: $u-white;
         padding-bottom: 30px;
@@ -25,6 +29,11 @@
             margin-bottom: 30px;
         }
 
+        @include mobile {
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
         b {
             font-weight: 700;
         }
@@ -36,6 +45,11 @@
                 margin-right: 24px;
                 width: 47px;
                 height: auto;
+
+                @include mobile {
+                    width: 35px;
+                    margin-right: 10px;
+                }
             }
         }
     }

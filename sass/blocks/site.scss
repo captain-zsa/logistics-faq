@@ -23,14 +23,17 @@
 
     &__nav {
         background-color: $u-white;
+        width: 308px;
+
+        @media (max-width: 1240px) {
+            width: 100%;
+        }
     }
 
     &__content {
         background-color: $silver-normal;
         flex-grow: 1;
         width: 70%;
-        height: 100vh;
-        overflow-x: auto;
         padding-left: 70px;
 
         @media (max-width: 1340px) {

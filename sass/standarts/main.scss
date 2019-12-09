@@ -5,11 +5,6 @@ body {
     text-rendering: optimizeLegibility;
     color: $font-color-main;
     background-color: $u-white;
-    overflow: hidden;
-
-    @media (max-width: 1240px) {
-        overflow: auto;
-    }
 }
 
 a {

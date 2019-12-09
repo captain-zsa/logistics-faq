@@ -100,7 +100,7 @@
             </aside>
         </div>
         <div class="site__content">
-            <section class="content">
+            <section class="content" id="head">
                 <h1 class="content__title  content__title--icon">
                     <img src="img/open-box--order.svg">
                     <b>оформление заказа <br>на выкуп</b>
@@ -139,11 +139,23 @@
         </div>
     </div>
 
+    <a href="#head" class="top"><svg><use xlink:href="#top"></use></svg></a>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
         $('.nav__burger').click(function(){
             $(this).toggleClass('nav__burger--active');
             $('.nav__list').toggleClass('nav__list--active');
+        });
+
+        $('.top').click(function(e){
+            e.preventDefault();
+            var elementClick = $(this).attr("href")
+            var destination = $(elementClick).offset().top;
+                $("html:not(:animated),body:not(:animated)").animate({
+                    scrollTop: destination
+                }, 800);
+            return false;
         });
     </script>
 </body>

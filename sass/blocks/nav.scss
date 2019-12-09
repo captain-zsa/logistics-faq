@@ -1,23 +1,31 @@
 .nav {
-    width: 308px;
+    width: 100%;
+    position: sticky;
+    top: 0;
     padding-right: 30px;
     box-sizing: border-box;
     padding-top: 50px;
     padding-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
 
     @media (max-width: 1240px) {
+        position: static;
         width: 768px;
         margin: 0 auto;
         box-sizing: border-box;
         padding: 0 20px;
         height: auto;
+        display: flex;
         flex-direction: row;
         align-items: center;
         padding-top: 20px;
         flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    @include mobile {
+        width: 100%;
+        padding: 0 10px;
+        padding-top: 15px;
     }
 
     &__logo {
@@ -27,10 +35,16 @@
         text-transform: uppercase;
         font-weight: 400;
 
-
         @media (max-width: 1240px) {
             width: 300px;
             margin-right: auto;
+        }
+
+        @include mobile {
+            margin-right: auto;
+            width: 242px;
+            order: -2;
+            margin-left: -4px;
         }
 
         img {
@@ -41,10 +55,18 @@
             @media (max-width: 1240px) {
                 width: 70px;
             }
+
+            @include mobile {
+                margin-right: 6px;
+            }
         }
 
         span {
             transform: translate(0, -9px);
+
+            @include mobile {
+                transform: translate(0, -5px);
+            }
         }
     }
 
@@ -56,6 +78,12 @@
             margin-top: 0;
             transform: translate(0, -9px);
             margin-right: 20px;
+        }
+
+        @include mobile {
+            margin-top: 10px;
+            width: 100%;
+            margin-right: 0;
         }
     }
 
@@ -102,9 +130,9 @@
         @include clear-ul;
         margin-top: 50px;
         flex-grow: 1;
-        overflow-y: auto;
 
         @media (max-width: 1240px) {
+            overflow-y: auto;
             overflow-x: hidden;
             width: 308px;
             padding-right: 20px;
@@ -123,6 +151,11 @@
             &--active {
                 left: 0;
             }
+        }
+
+        @include mobile {
+            width: 320px;
+            box-sizing: border-box;
         }
     }
 
@@ -188,6 +221,10 @@
             display: block;
         }
 
+        @include mobile {
+            order: -1;
+        }
+
         &:after,
         &:before {
             content: '';
@@ -212,6 +249,13 @@
 
         &--active {
             border-color: transparent;
+
+            @include mobile {
+                position: absolute;
+                top: 41px;
+                right: 10px;
+                z-index: 12;
+            }
 
             &:hover {
                 border-color: transparent;

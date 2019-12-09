@@ -10,6 +10,11 @@
         padding-left: 113px;
         border-top: 1px solid $silver-normal;
 
+        @include mobile {
+            padding: 20px 15px;
+            padding-left: 60px;
+        }
+
         &:first-child {
             border-top: none;
         }
@@ -29,6 +34,15 @@
             font-size: 20px;
             font-weight: 300;
             color: $font-color-main;
+
+            @include mobile {
+                left: 15px;
+                top: 21px;
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+                line-height: 32px;
+            }
         }
     }
 
