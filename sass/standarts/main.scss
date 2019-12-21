@@ -5,6 +5,7 @@ body {
     text-rendering: optimizeLegibility;
     color: $font-color-main;
     background-color: $u-white;
+    min-height: 100vh;
 }
 
 a {

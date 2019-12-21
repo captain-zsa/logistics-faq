@@ -52,6 +52,11 @@
             height: auto;
             margin-right: 10px;
 
+            @media (max-width: 1655px) {
+                width: 110px;
+                margin-right: 7px;
+            }
+
             @media (max-width: 1240px) {
                 width: 70px;
             }
